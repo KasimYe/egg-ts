@@ -27,6 +27,8 @@ export default (app: Application) => {
     },
     {
       timestamps: false,
+      freezeTableName: true,
+      tableName: app.config.tablePrefix + 'user',
     },
   );
   return user;

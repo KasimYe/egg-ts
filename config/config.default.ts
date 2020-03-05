@@ -20,10 +20,12 @@ export default (appInfo: EggAppInfo) => {
     dialect: 'mysql',
     host: '127.0.0.1',
     port: 3306,
-    database: 'test',
+    database: 'nideshop',
     username: 'root',
     password: 'BRYY@abc123',
   };
+
+  config.tablePrefix = 'nideshop_';
 
   // add your special config in here
   const bizConfig = {

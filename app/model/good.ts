@@ -34,6 +34,8 @@ export default (app: Application) => {
     },
     {
       timestamps: false,
+      freezeTableName: true,
+      tableName: app.config.tablePrefix + 'goods',
     },
   );
   return good;

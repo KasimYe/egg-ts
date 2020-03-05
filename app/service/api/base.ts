@@ -12,18 +12,35 @@ export default class BaseService extends Service {
     this.model = model;
   }
 
-  async list(query: object, page: number, per = 10) {
-    const result = await this.app.model[this.model].findAll({
-      where: query,
-      limit: per,
-      offset: (page - 1) * per,
-    });
-    return result;
+  /**
+   * findAll List
+   * @param where 查询条件
+   * @param offset 页数
+   * @param limit 每页条目数
+   * @param order 排序，格式[['name', 'DESC']]
+   * @param attributes 查询的列
+   */
+  async list(
+    where: object = {},
+    offset: number = 1,
+    limit: number = 10,
+    order: object = [],
+    attributes: string[] = [],
+  ) {
+    const options = {
+      where: where,
+      limit: limit,
+      offset: (offset - 1) * limit,
+      order: order,
+      attributes: attributes.length > 0 ? attributes : null,
+    };
+    return await this.app.model[this.model].findAll(options);
   }
 
   async one(id: number) {
-    const result = await this.app.model[this.model].findOne({ where: { id: id } });
-    return result;
+    return await this.app.model[this.model].findOne({
+      where: { id: id },
+    });
   }
 
   async update(id: number, data: object) {
@@ -41,5 +58,4 @@ export default class BaseService extends Service {
   }
 
   //   async deleteMany(ids: number[]) {}
-  
 }

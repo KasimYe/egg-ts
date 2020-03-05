@@ -14,6 +14,8 @@ export default (app: Application) => {
     },
     {
       timestamps: false,
+      freezeTableName: true,
+      tableName: app.config.tablePrefix + 'channel',
     },
   );
   return channel;

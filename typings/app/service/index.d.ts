@@ -5,8 +5,11 @@ import 'egg';
 import ExportTest from '../../../app/service/Test';
 import ExportApiAds from '../../../app/service/api/ads';
 import ExportApiBase from '../../../app/service/api/base';
+import ExportApiBrands from '../../../app/service/api/brands';
+import ExportApiCategories from '../../../app/service/api/categories';
 import ExportApiChannels from '../../../app/service/api/channels';
 import ExportApiGoods from '../../../app/service/api/goods';
+import ExportApiTopics from '../../../app/service/api/topics';
 import ExportApiUsers from '../../../app/service/api/users';
 
 declare module 'egg' {
@@ -15,8 +18,11 @@ declare module 'egg' {
     api: {
       ads: ExportApiAds;
       base: ExportApiBase;
+      brands: ExportApiBrands;
+      categories: ExportApiCategories;
       channels: ExportApiChannels;
       goods: ExportApiGoods;
+      topics: ExportApiTopics;
       users: ExportApiUsers;
     }
   }
