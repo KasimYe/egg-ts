@@ -10,6 +10,12 @@ export default (appInfo: EggAppInfo) => {
   // add your egg config in here
   config.middleware = [];
 
+  config.security = {
+    csrf: {
+      enable: false,
+    },
+  };
+
   config.sequelize = {
     dialect: 'mysql',
     host: '127.0.0.1',

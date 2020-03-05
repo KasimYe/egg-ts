@@ -3,11 +3,21 @@
 
 import 'egg';
 import ExportHome from '../../../app/controller/home';
-import ExportUsers from '../../../app/controller/users';
+import ExportApiAds from '../../../app/controller/api/ads';
+import ExportApiBase from '../../../app/controller/api/base';
+import ExportApiChannels from '../../../app/controller/api/channels';
+import ExportApiGoods from '../../../app/controller/api/goods';
+import ExportApiUsers from '../../../app/controller/api/users';
 
 declare module 'egg' {
   interface IController {
     home: ExportHome;
-    users: ExportUsers;
+    api: {
+      ads: ExportApiAds;
+      base: ExportApiBase;
+      channels: ExportApiChannels;
+      goods: ExportApiGoods;
+      users: ExportApiUsers;
+    }
   }
 }

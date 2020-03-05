@@ -3,11 +3,21 @@
 
 import 'egg';
 import ExportTest from '../../../app/service/Test';
-import ExportUsers from '../../../app/service/users';
+import ExportApiAds from '../../../app/service/api/ads';
+import ExportApiBase from '../../../app/service/api/base';
+import ExportApiChannels from '../../../app/service/api/channels';
+import ExportApiGoods from '../../../app/service/api/goods';
+import ExportApiUsers from '../../../app/service/api/users';
 
 declare module 'egg' {
   interface IService {
     test: ExportTest;
-    users: ExportUsers;
+    api: {
+      ads: ExportApiAds;
+      base: ExportApiBase;
+      channels: ExportApiChannels;
+      goods: ExportApiGoods;
+      users: ExportApiUsers;
+    }
   }
 }
