@@ -8,7 +8,7 @@ export default (appInfo: EggAppInfo) => {
   config.keys = appInfo.name + '_1583309346453_1309';
 
   // add your egg config in here
-  config.middleware = [];
+  config.middleware = ['jwt'];
 
   config.security = {
     csrf: {
@@ -23,6 +23,11 @@ export default (appInfo: EggAppInfo) => {
     database: 'nideshop',
     username: 'root',
     password: 'BRYY@abc123',
+  };
+
+  config.wechat = {
+    appid: 'wx547c92fcc07b369c',
+    secret: '51d784028b41dbdfae648fc6312d70c1',
   };
 
   config.tablePrefix = 'nideshop_';

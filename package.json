@@ -22,16 +22,22 @@
     "clean": "ets clean"
   },
   "dependencies": {
+    "crypto": "^1.0.1",
     "egg": "^2.6.1",
     "egg-scripts": "^2.6.0",
     "egg-sequelize": "^5.2.1",
-    "mysql2": "^2.1.0"
+    "egg-validate": "^2.0.2",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.1.0",
+    "uuid": "^7.0.2"
   },
   "devDependencies": {
+    "@types/jsonwebtoken": "^8.3.8",
     "@types/mocha": "^2.2.40",
     "@types/node": "^7.0.12",
     "@types/sequelize": "^4.28.8",
     "@types/supertest": "^2.0.0",
+    "@types/uuid": "^7.0.0",
     "autod": "^3.0.1",
     "autod-egg": "^1.1.0",
     "egg-bin": "^4.11.0",

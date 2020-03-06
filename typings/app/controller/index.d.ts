@@ -4,6 +4,7 @@
 import 'egg';
 import ExportHome from '../../../app/controller/home';
 import ExportApiAds from '../../../app/controller/api/ads';
+import ExportApiAuth from '../../../app/controller/api/auth';
 import ExportApiBase from '../../../app/controller/api/base';
 import ExportApiBrands from '../../../app/controller/api/brands';
 import ExportApiCategories from '../../../app/controller/api/categories';
@@ -18,6 +19,7 @@ declare module 'egg' {
     home: ExportHome;
     api: {
       ads: ExportApiAds;
+      auth: ExportApiAuth;
       base: ExportApiBase;
       brands: ExportApiBrands;
       categories: ExportApiCategories;

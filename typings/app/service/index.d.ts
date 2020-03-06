@@ -11,6 +11,7 @@ import ExportApiChannels from '../../../app/service/api/channels';
 import ExportApiGoods from '../../../app/service/api/goods';
 import ExportApiTopics from '../../../app/service/api/topics';
 import ExportApiUsers from '../../../app/service/api/users';
+import ExportApiWechat from '../../../app/service/api/wechat';
 
 declare module 'egg' {
   interface IService {
@@ -24,6 +25,7 @@ declare module 'egg' {
       goods: ExportApiGoods;
       topics: ExportApiTopics;
       users: ExportApiUsers;
+      wechat: ExportApiWechat;
     }
   }
 }
